@@ -1,28 +1,7 @@
 const products = [
-  {
-    id: 1,
-    name: "Basic T-shirt",
-    price: 499,
-    img: "https://via.placeholder.com/220x150.png?text=T-Shirt",
-  },
-  {
-    id: 2,
-    name: "Stylish Shoes",
-    price: 1299,
-    img: "https://via.placeholder.com/220x150.png?text=Shoes",
-  },
-  {
-    id: 3,
-    name: "Classic Jeans",
-    price: 999,
-    img: "https://via.placeholder.com/220x150.png?text=Jeans",
-  },
-  {
-    id: 4,
-    name: "Smart Watch",
-    price: 1999,
-    img: "https://via.placeholder.com/220x150.png?text=Watch",
-  }
+  { id: 1, name: "T-shirt", price: 499, img: "https://via.placeholder.com/200x150" },
+  { id: 2, name: "Shoes", price: 999, img: "https://via.placeholder.com/200x150" },
+  { id: 3, name: "Jeans", price: 799, img: "https://via.placeholder.com/200x150" },
 ];
 
 let cartCount = 0;
@@ -45,6 +24,10 @@ function renderProducts() {
 function addToCart() {
   cartCount++;
   document.getElementById("cart-count").innerText = cartCount;
+}
+
+function viewCart() {
+  alert(`You have ${cartCount} item(s) in your cart.`);
 }
 
 renderProducts();
